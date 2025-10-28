@@ -3,62 +3,275 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My GitHub Page</title>
+  <title>Ali Imran's Personal Blog - Electricity Market Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #0078ff, #00c6ff);
-      color: white;
-      height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #667eea;
+      margin: 0 auto 20px;
+      background-image: url('materials/aliimran_pic.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      font-size: 3rem;
+      color: white;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    p {
-      font-size: 1.2rem;
+    .header p {
+      font-size: 1.1rem;
+      color: #666;
       max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
 
-    a {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.2);
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+      backdrop-filter: blur(10px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border-color: #667eea;
+    }
+
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      color: white;
+      backdrop-filter: blur(10px);
+    }
+
+    .footer a {
+      color: white;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      margin-top: 20px;
-      display: inline-block;
-      transition: background 0.3s;
+      font-weight: 500;
     }
 
-    a:hover {
-      background: rgba(255, 255, 255, 0.4);
+    .footer a:hover {
+      text-decoration: underline;
     }
 
-    footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      opacity: 0.8;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      .header {
+        padding: 30px 20px;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .card {
+        padding: 25px 20px;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .header h1 {
+        font-size: 1.8rem;
+      }
+
+      .header p {
+        font-size: 1rem;
+      }
+
+      .card h3 {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>👋 Hi, I’m Ali Imran</h1>
-  <p>Welcome to my personal GitHub Page!  
-     I’m a Full Stack Developer specializing in ASP.NET Core, Angular, and SQL Server.</p>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="profile-pic">
+      </div>
+      <h1>👋 Hi, I'm Ali Imran</h1>
+      <p>I'm a Full Stack Developer and <strong>software engineer</strong> deeply engaged in the <strong>Electricity Market</strong> domain, where technology meets energy innovation. This space reflects my journey, dedication, and contributions to advancing efficiency and intelligence in energy systems. I share insights, experiences, and learnings from my ongoing work in building smarter market solutions.</p>
+    </div>
 
-  <a href="https://github.com/aliimran" target="_blank">🔗 Visit my GitHub Profile</a>
+    <!-- Cards Grid -->
+    <div class="cards-grid">
+      <div class="card" onclick="openPage('why-sharing')">
+        <div class="card-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <h3>Why I am sharing this?</h3>
+        <p>Discover my motivation behind sharing my electricity market journey and how it can benefit others in the field.</p>
+      </div>
 
-  <footer>© 2025 Ali Imran | Built with ❤️ on GitHub Pages</footer>
+      <div class="card" onclick="openPage('what-learn')">
+        <div class="card-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>What I learn?</h3>
+        <p>Explore the key concepts, technologies, and insights I've gained through my experience in electricity markets.</p>
+      </div>
+
+      <div class="card" onclick="openPage('electricity-market')">
+        <div class="card-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>What is Electricity Market?</h3>
+        <p>Understanding the fundamentals of electricity markets, trading mechanisms, and market structures.</p>
+      </div>
+
+      <div class="card" onclick="openPage('before-electricity-market')">
+        <div class="card-icon">
+          <i class="fas fa-history"></i>
+        </div>
+        <h3>Before Electricity Market</h3>
+        <p>Learn about the traditional power systems and what existed before modern electricity markets were established.</p>
+      </div>
+
+      <div class="card" onclick="openPage('after-electricity-market')">
+        <div class="card-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>After Electricity Market</h3>
+        <p>Discover the transformation and evolution that occurred after the introduction of electricity markets.</p>
+      </div>
+
+      <div class="card" onclick="openPage('benefits-electricity-market')">
+        <div class="card-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3>Benefits of Electricity Market</h3>
+        <p>Explore the advantages and positive impacts that electricity markets bring to consumers, producers, and the economy.</p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 Ali Imran | Built with ❤️ on GitHub Pages | 
+        <a href="https://github.com/aliimran" target="_blank">Visit my GitHub Profile</a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function openPage(pageName) {
+      const pageTitles = {
+        'why-sharing': 'Why I am sharing this?',
+        'what-learn': 'What I learn?',
+        'electricity-market': 'What is Electricity Market?',
+        'before-electricity-market': 'Before Electricity Market',
+        'after-electricity-market': 'After Electricity Market',
+        'benefits-electricity-market': 'Benefits of Electricity Market'
+      };
+      
+      // Check if the page exists, otherwise show alert
+      if (pageName === 'why-sharing') {
+        window.location.href = 'why-sharing.html';
+      } else {
+        alert(`Opening page: ${pageTitles[pageName]}\n\nThis page will be created soon! For now, this is a placeholder.`);
+      }
+    }
+  </script>
 </body>
 </html>
