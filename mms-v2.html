@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MMS 2.0 — The Future of Real-Time Electricity Markets - Ali Imran's Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .blog-header {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin-bottom: 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .blog-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 6px solid #667eea;
+      margin: 0 auto 30px;
+      background-image: url('materials/aliimran_pic.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .blog-title {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    .blog-subtitle {
+      font-size: 1.3rem;
+      color: #666;
+      font-weight: 400;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Content Section */
+    .blog-content {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 50px 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      margin-bottom: 30px;
+    }
+
+    .blog-content p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      text-align: justify;
+      color: #444;
+    }
+
+    .blog-content p:first-child {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #667eea;
+      margin: 40px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #667eea;
+      display: inline-block;
+    }
+
+    .highlight-quote {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .benefits-list {
+      background: rgba(102, 126, 234, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 20px 0;
+      border-left: 5px solid #667eea;
+    }
+
+    .benefits-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .benefits-list li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .benefits-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .challenges-list {
+      background: rgba(255, 193, 7, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 20px 0;
+      border-left: 5px solid #ffc107;
+    }
+
+    .challenges-list ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .challenges-list li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .challenges-list li:before {
+      content: "⚠";
+      position: absolute;
+      left: 0;
+      color: #ffc107;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .ai-section {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .ai-section h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .conclusion-section {
+      background: rgba(40, 167, 69, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px 0;
+      border-left: 5px solid #28a745;
+    }
+
+    .conclusion-section h3 {
+      color: #28a745;
+      margin-bottom: 15px;
+    }
+
+    /* Navigation */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-button {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .home-button {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .home-button:hover {
+      background: linear-gradient(135deg, #5a6fd8, #6a4190);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      .blog-header {
+        padding: 30px 25px;
+      }
+
+      .blog-title {
+        font-size: 2.2rem;
+      }
+
+      .blog-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .blog-content {
+        padding: 30px 25px;
+      }
+
+      .blog-image {
+        width: 150px;
+        height: 150px;
+      }
+
+      .nav-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-button {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .blog-title {
+        font-size: 1.8rem;
+      }
+
+      .blog-content p {
+        font-size: 1rem;
+      }
+
+      .blog-content p:first-child {
+        font-size: 1.1rem;
+      }
+
+      .highlight-quote {
+        padding: 20px;
+        font-size: 1rem;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Blog Header -->
+    <div class="blog-header">
+      <div class="blog-image"></div>
+      <h1 class="blog-title">MMS 2.0 — The Future of Real-Time Electricity Markets</h1>
+      <p class="blog-subtitle">In today's market, billing and settlements are calculated at the end of each month. But imagine a system that performs this calculation every hour — continuously updating payables, receivables, and balances in near real-time.</p>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="blog-content">
+      <h2 class="section-title">The Idea</h2>
+      <p>What if we could design a next-generation Market Management System (MMS) that calculates and updates market positions on an hourly basis instead of waiting until month-end?</p>
+      
+      <p>Each hour, the system would process all market data — generation, consumption, prices, and contract statuses — and integrate them into a dynamic cumulative report. By the end of the month, settlements would already be pre-validated, significantly reducing manual effort and uncertainty.</p>
+      
+      <p>This approach would bring greater transparency, efficiency, and discipline to the electricity market.</p>
+
+      <h2 class="section-title">Why It Matters</h2>
+      <p>Currently, if a participant breaches a contract or exceeds generation limits, the issue is often detected only during month-end settlement. By implementing hourly calculations, such breaches could be detected instantly — allowing market operators to alert or even stop non-compliant participants in real time.</p>
+      
+      <div class="highlight-quote">
+        "This real-time insight would improve resource allocation and decision-making, enhance market integrity and compliance, and enable a more predictable and intelligent electricity ecosystem."
+      </div>
+
+      <div class="benefits-list">
+        <h3>Key Benefits:</h3>
+        <ul>
+          <li>Improve resource allocation and decision-making</li>
+          <li>Enhance market integrity and compliance</li>
+          <li>Enable a more predictable and intelligent electricity ecosystem</li>
+        </ul>
+      </div>
+
+      <div class="ai-section">
+        <h3>The Role of AI in Predictive Insights</h3>
+        <p>From a technology perspective, integrating Artificial Intelligence (AI) into this hourly settlement framework could transform how we predict and manage market behavior. With access to continuous real-time data, AI models could analyze consumption patterns, generation trends, and pricing fluctuations to forecast potential imbalances or breaches before they occur.</p>
+        
+        <p>This would not only enhance operational accuracy but also enable proactive decision-making, allowing market operators to take preventive actions rather than reactive ones. In essence, AI could serve as the predictive backbone of the next-generation MMS — making the market not just faster, but smarter.</p>
+      </div>
+
+      <h2 class="section-title">Challenges Ahead</h2>
+      <p>The key challenge lies in data availability and synchronization.</p>
+      
+      <div class="challenges-list">
+        <h3>System Requirements:</h3>
+        <ul>
+          <li>Real-time data from all CDP (Commercial Data Points)</li>
+          <li>Hourly marginal prices, generation changes, and availability metrics</li>
+          <li>Continuous validation and error handling across all market participants</li>
+        </ul>
+      </div>
+      
+      <p>Although the data requirement is significant, advances in automation, smart metering, and data integration platforms are making this goal increasingly achievable.</p>
+
+      <div class="conclusion-section">
+        <h3>Conclusion</h3>
+        <p><strong>MMS Version 2</strong> — a system capable of hourly settlement and real-time monitoring — could be the next big leap in market management innovation. While it demands thoughtful design and reliable infrastructure, the long-term benefits for transparency, accountability, and operational excellence are immense.</p>
+        
+        <p>This concept is more than a technical improvement — it's a step toward a smarter, faster, and more disciplined electricity market.</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-buttons">
+      <a href="index.html" class="nav-button">
+        <i class="fas fa-arrow-left"></i>
+        Back to Home
+      </a>
+      <a href="index.html" class="nav-button home-button">
+        <i class="fas fa-home"></i>
+        Home
+      </a>
+      <a href="why-sharing.html" class="nav-button">
+        Previous Post
+        <i class="fas fa-arrow-left"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" onclick="scrollToTop()">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Back to top functionality
+    window.addEventListener('scroll', function() {
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

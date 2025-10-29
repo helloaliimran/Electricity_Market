@@ -244,6 +244,14 @@
         <h3>Benefits of Electricity Market</h3>
         <p>Explore the advantages and positive impacts that electricity markets bring to consumers, producers, and the economy.</p>
       </div>
+
+      <div class="card" onclick="openPage('mms-v2')">
+        <div class="card-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>MMS 2.0 — The Future of Real-Time Electricity Markets</h3>
+        <p>Discover how next-generation Market Management Systems could revolutionize electricity markets with hourly settlements and real-time monitoring.</p>
+      </div>
     </div>
 
     <!-- Footer -->
@@ -262,12 +270,15 @@
         'electricity-market': 'What is Electricity Market?',
         'before-electricity-market': 'Before Electricity Market',
         'after-electricity-market': 'After Electricity Market',
-        'benefits-electricity-market': 'Benefits of Electricity Market'
+        'benefits-electricity-market': 'Benefits of Electricity Market',
+        'mms-v2': 'MMS 2.0 — The Future of Real-Time Electricity Markets'
       };
       
       // Check if the page exists, otherwise show alert
       if (pageName === 'why-sharing') {
         window.location.href = 'why-sharing.html';
+      } else if (pageName === 'mms-v2') {
+        window.location.href = 'mms-v2.html';
       } else {
         alert(`Opening page: ${pageTitles[pageName]}\n\nThis page will be created soon! For now, this is a placeholder.`);
       }
