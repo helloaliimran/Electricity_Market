@@ -205,6 +205,14 @@
         <p>Discover my motivation behind sharing my electricity market journey and how it can benefit others in the field.</p>
       </div>
 
+       <div class="card" onclick="openPage('EPİAŞ-intro')">
+        <div class="card-icon">
+          <i class="fas fa-stack-exchange"></i>
+        </div>
+        <h3>EPİAŞ — Powering Turkey’s Modern Electricity Market</h3>
+        <p>Explore how Turkey’s EPİAŞ has built one of the most advanced electricity market systems, and how Pakistan is benchmarking its market reforms and digital infrastructure against this successful model.</p>
+      </div>
+
       <div class="card" onclick="openPage('what-learn')">
         <div class="card-icon">
           <i class="fas fa-graduation-cap"></i>
@@ -279,6 +287,8 @@
         window.location.href = 'why-sharing.html';
       } else if (pageName === 'mms-v2') {
         window.location.href = 'mms-v2.html';
+      } else if (pageName === 'EPİAŞ-intro') {
+        window.location.href = 'EPİAŞ-intro.html';
       } else {
         alert(`Opening page: ${pageTitles[pageName]}\n\nThis page will be created soon! For now, this is a placeholder.`);
       }
